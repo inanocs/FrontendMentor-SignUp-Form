@@ -12,6 +12,7 @@
 }
 
 body {
+  align-items: center;
   background-color: var(--red);
   background-image: url("../assets/images/bg-intro-mobile.png");
   background-position: center;
@@ -25,19 +26,18 @@ body {
 .header {
   color: var(--white);
   line-height: 1.8em;
+  text-align: center;
 }
 
 .header__title {
   line-height: 2rem;
   font-size: 1.5em;
   padding: 0 1rem;
-  text-align: center;
 }
 
 .header__subtitle {
   font-weight: 500;
   font-size: 1em;
-  text-align: center;
 }
 
 .section {
@@ -73,11 +73,19 @@ body {
 .form__item:nth-child(2),
 .form__item:nth-child(3),
 .form__item:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+}
+.form__input-container {
   position: relative;
   border: 1px solid #00000021;
   border-radius: 0.3em;
   padding: 0.5em 0;
   width: 100%;
+}
+
+.form__input-container--error {
+  border: 2px solid var(--red);
 }
 
 .form__item:not(:first-child) {
@@ -101,7 +109,6 @@ body {
 }
 
 .form__input,
-.form__passwd,
 .form__submit {
   display: block;
   border: none;
@@ -110,15 +117,40 @@ body {
   width: 100%;
 }
 
-.form__input,
-.form__passwd {
+.form__input {
   padding: 0.5em 1em;
 }
 
-.form__input--active,
-.form__passwd--active {
+.form__input--active {
   padding-top: 1.3em;
   padding-bottom: 0;
+}
+
+.form__img-error {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0.8em;
+  right: 15px;
+}
+
+.form__img-error--active {
+  display: block;
+}
+
+.form__error {
+  color: var(--red);
+  display: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  font-style: italic;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: right;
+}
+
+.form__error--active {
+  display: block;
 }
 
 .form__submit {
@@ -150,5 +182,35 @@ body {
 }
 
 .footer {
+  margin-top: 0.8em;
   text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("../assets/images/bg-intro-desktop.png");
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    padding-left: 9em;
+    padding-right: 9em;
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .header__title {
+    line-height: 2.8rem;
+    font-size: 2.5em;
+    padding: 0;
+  }
+
+  .header__subtitle {
+    font-size: 1.1em;
+  }
+
+  .footer {
+    font-size: 1.2em;
+    grid-column: 1/-1;
+  }
 }
