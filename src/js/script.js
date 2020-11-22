@@ -44,6 +44,7 @@ window.addEventListener("load", () => {
 
   const checkForm = (input) => {
     let correct = true;
+    const regExBool = [];
     input.forEach((item, idx) => {
       item.nextElementSibling.classList.add("form__img-error--active");
       item.parentElement.classList.add("form__input-container--error");
@@ -55,13 +56,22 @@ window.addEventListener("load", () => {
         item.parentElement.nextElementSibling.textContent =
           inputERR.emptyMessage[idx];
       } else {
+        let validate;
         if (idx == 2) {
-          correct = validateRegEx(item, pattern.email, idx);
+          validate = validateRegEx(item, pattern.email, idx);
+          regExBool.push(validate);
         } else if (idx == 3) {
-          correct = validateRegEx(item, pattern.password, idx);
+          validate = validateRegEx(item, pattern.password, idx);
+          regExBool.push(validate);
         } else {
-          correct = validateRegEx(item, pattern.name, idx);
+          validate = validateRegEx(item, pattern.name, idx);
+          regExBool.push(validate);
         }
+      }
+
+      if (regExBool.length == input.length) {
+        correct =
+          regExBool.findIndex((bool) => bool == false) != -1 ? false : true;
       }
     });
 
