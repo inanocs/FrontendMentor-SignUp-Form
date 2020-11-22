@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
       "First Name must contain up to 30 alphabetic characters",
       "Last Name must contain up to 30 alphabetic characters",
       "Looks like this is not an email",
-      "Password must contain 8 length ",
+      "Password must contain 8 characters ",
     ],
   };
 
