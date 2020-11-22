@@ -108,11 +108,9 @@ window.addEventListener("load", () => {
     }
   });
 
-  form.addEventListener("click", (e) => {
-    if (e.target == input[input.length - 1]) {
-      e.preventDefault();
-      const formCorrect = checkForm(input.slice(0, input.length - 1));
-      if (formCorrect) form.submit();
-    }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formCorrect = checkForm(input.slice(0, input.length - 1));
+    if (formCorrect) form.submit();
   });
 });
