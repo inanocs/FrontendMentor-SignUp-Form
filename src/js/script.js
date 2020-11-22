@@ -68,11 +68,7 @@ window.addEventListener("load", () => {
     return correct;
   };
   form.addEventListener("focusin", (e) => {
-    if (e.target == input[input.length - 1]) {
-      e.preventDefault();
-      const formCorrect = checkForm(input.slice(0, input.length - 1));
-      if (formCorrect) form.submit();
-    } else {
+    if (e.target != input[input.length - 1]) {
       input.forEach((item) => {
         if (e.target == item) {
           if (e.target.value == "") {
@@ -99,6 +95,14 @@ window.addEventListener("load", () => {
           });
         }
       });
+    }
+  });
+
+  form.addEventListener("click", (e) => {
+    if (e.target == input[input.length - 1]) {
+      e.preventDefault();
+      const formCorrect = checkForm(input.slice(0, input.length - 1));
+      if (formCorrect) form.submit();
     }
   });
 });
