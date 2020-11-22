@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/script.js"></script>
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Learn to code by watching others</h1>
+      <h2 class="header__subtitle">
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </h2>
+    </header>
+
+    <section class="section">
+      <a href="#" class="trial"
+        ><span class="trial__bold">Try it free 7 days </span> then $20/mo.
+        thereafter</a
+      >
+
+      <form action="#" class="form" id="form" autocomplete="off">
+        <div class="form__item">
+          <label class="form__desc" for="name">First Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form__input"
+            autocomplete="nope"
+          />
+        </div>
+        <div class="form__item">
+          <label class="form__desc" for="name">Last Name</label>
+          <input
+            type="text"
+            name=""
+            id="lastName"
+            class="form__input"
+            autocomplete="nope"
+          />
+        </div>
+        <div class="form__item">
+          <label class="form__desc" for="name">Email Address</label>
+          <input
+            type="text"
+            name=""
+            id="email"
+            class="form__input"
+            autocomplete="nope"
+          />
+        </div>
+        <div class="form__item">
+          <label class="form__desc" for="name">Password</label>
+          <input type="password" name="" id="passwd" class="form__input" />
+        </div>
+        <div class="form__item">
+          <input
+            type="submit"
+            value="claim your free trial"
+            class="form__submit"
+          />
+        </div>
+        <p class="form__item">
+          <span>
+            By clicking the button, you are agreeing to our
+            <a href="#" class="form__link">Terms and Services</a>
+          </span>
+        </p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">inanocs</a>.
+      </p>
+    </footer>
+  </body>
+</html>

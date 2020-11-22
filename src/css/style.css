@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayfish-blue: hsl(246, 25%, 77%);
+  --white: rgb(240, 240, 240);
+}
+
+body {
+  background-color: var(--red);
+  background-image: url("../assets/images/bg-intro-mobile.png");
+  background-position: center;
+  display: grid;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 1.5em;
+}
+
+.header {
+  color: var(--white);
+  line-height: 1.8em;
+}
+
+.header__title {
+  line-height: 2rem;
+  font-size: 1.5em;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.header__subtitle {
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+}
+
+.section {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.trial {
+  box-shadow: 0px 7px 0px 0px #0000002f;
+  border-radius: 0.5em;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 1.5em;
+  text-align: center;
+  padding: 1.6em 3em;
+  text-decoration: none;
+}
+
+.trial__bold {
+  font-weight: 700;
+}
+
+.form {
+  background: #ffffff;
+  box-shadow: 0px 7px 0px 0px #0000002f;
+  border-radius: 0.5em;
+  padding: 1.5em;
+}
+
+.form__item:nth-child(1),
+.form__item:nth-child(2),
+.form__item:nth-child(3),
+.form__item:nth-child(4) {
+  position: relative;
+  border: 1px solid #00000021;
+  border-radius: 0.3em;
+  padding: 0.5em 0;
+  width: 100%;
+}
+
+.form__item:not(:first-child) {
+  margin-top: 0.6em;
+}
+
+.form__desc {
+  font-size: 0.9em;
+  color: var(--dark-blue);
+  font-weight: 700;
+  position: absolute;
+  pointer-events: none;
+  left: 1em;
+  top: 1.3em;
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.form__desc--active {
+  transform: scale(0.8) translateY(-1em);
+}
+
+.form__input,
+.form__passwd,
+.form__submit {
+  display: block;
+  border: none;
+  outline: none;
+  height: auto;
+  width: 100%;
+}
+
+.form__input,
+.form__passwd {
+  padding: 0.5em 1em;
+}
+
+.form__input--active,
+.form__passwd--active {
+  padding-top: 1.3em;
+  padding-bottom: 0;
+}
+
+.form__submit {
+  background-color: var(--green);
+  box-shadow: inset 0px -4px 0px 0px #0000002f;
+  border-radius: 0.3em;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 1.5em 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form__item:last-child {
+  color: var(--grayfish-blue);
+  line-height: 2em;
+  margin-top: 1em;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form__link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: var(--red);
+}
+
+.footer {
+  text-align: center;
+}
